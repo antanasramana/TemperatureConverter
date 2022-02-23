@@ -2,7 +2,7 @@
 {
     public interface ITemperature
     {
-        decimal ToKelvin();
-        decimal GetTemperatureFromKelvin(decimal fromTemperature);
+        decimal ToKelvin(decimal temperature);
+        decimal GetFromKelvin(decimal temperature);
     }
 }

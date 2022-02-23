@@ -9,9 +9,9 @@
             var fromTemperature = new TFrom();
             var resultTemperature = new TResult();
             
-            var fromTemperatureInKelvin = fromTemperature.ToKelvin();
+            var fromTemperatureInKelvin = fromTemperature.ToKelvin(temperature);
 
-            return resultTemperature.GetTemperatureFromKelvin(fromTemperatureInKelvin);
+            return resultTemperature.GetFromKelvin(fromTemperatureInKelvin);
         }
     }
 }

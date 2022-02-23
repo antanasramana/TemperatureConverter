@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Temperature.Domain
+﻿namespace Temperature.Domain
 {
     public class CelsiusTemperature : ITemperature
     {
@@ -9,14 +7,14 @@ namespace Temperature.Domain
 
         }
 
-        public decimal GetTemperatureFromKelvin(decimal fromTemperature)
+        public decimal GetFromKelvin(decimal kelvinTemperature)
         {
-            throw new NotImplementedException();
+            return kelvinTemperature - 273.15m;
         }
 
-        public decimal ToKelvin()
+        public decimal ToKelvin(decimal celsiusTemperature)
         {
-            throw new NotImplementedException();
+            return celsiusTemperature + 273.15m;
         }
     }
 }

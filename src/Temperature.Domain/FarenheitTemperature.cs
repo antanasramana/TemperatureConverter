@@ -9,14 +9,14 @@ namespace Temperature.Domain
 
         }
 
-        public decimal GetTemperatureFromKelvin(decimal fromTemperature)
+        public decimal GetFromKelvin(decimal kelvinTemperature)
         {
-            throw new NotImplementedException();
+            return Decimal.Round(kelvinTemperature * 9m / 5m - 459.67m, 3);
         }
 
-        public decimal ToKelvin()
+        public decimal ToKelvin(decimal farenheitTemperature)
         {
-            throw new NotImplementedException();
+            return Decimal.Round(5m / 9m * (farenheitTemperature + 459.67m), 3);
         }
     }
 }
