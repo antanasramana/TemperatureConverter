@@ -14,9 +14,9 @@ namespace Temperature.Tests
         [MemberData(nameof(CelsiusToKelvinTestCases))]
         public void ConvertFromSpecifiedTemperatureToResultingTemperature_ReturnsExpectedConvertedTemperature(Func<decimal, decimal> convertMethodToUse, decimal temperatureFrom, decimal expectedConvertedTemperature)
         {
-            var actualCelsius = convertMethodToUse(temperatureFrom);
+            var actualTemperature = convertMethodToUse(temperatureFrom);
 
-            actualCelsius.Should().Be(expectedConvertedTemperature);
+            actualTemperature.Should().Be(expectedConvertedTemperature);
         }
 
         public static IEnumerable<object[]> FarenheitToCelsiusTestCases()
