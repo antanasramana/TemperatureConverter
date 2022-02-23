@@ -6,12 +6,14 @@ namespace Temperature.Domain
     {
         public decimal GetFromKelvin(decimal kelvinTemperature)
         {
-            return Decimal.Round(kelvinTemperature * 9m / 5m - 459.67m, 3);
+            var farenheitTemperature = kelvinTemperature * 9m / 5m - 459.67m;
+            return decimal.Round(farenheitTemperature, 3);
         }
 
         public decimal ToKelvin(decimal farenheitTemperature)
         {
-            return Decimal.Round(5m / 9m * (farenheitTemperature + 459.67m), 3);
+            var kelvinTemperature = 5m / 9m * (farenheitTemperature + 459.67m);
+            return decimal.Round(kelvinTemperature, 3);
         }
     }
 }
