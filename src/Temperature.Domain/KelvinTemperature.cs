@@ -2,11 +2,6 @@
 {
     public class KelvinTemperature : ITemperature
     {
-        public KelvinTemperature()
-        {
-
-        }
-
         public decimal GetFromKelvin(decimal kelvinTemperature)
         {
             return kelvinTemperature;

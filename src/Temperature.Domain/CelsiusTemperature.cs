@@ -2,11 +2,6 @@
 {
     public class CelsiusTemperature : ITemperature
     {
-        public CelsiusTemperature()
-        {
-
-        }
-
         public decimal GetFromKelvin(decimal kelvinTemperature)
         {
             return kelvinTemperature - 273.15m;
