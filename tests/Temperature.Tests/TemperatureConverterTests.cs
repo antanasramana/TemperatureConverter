@@ -21,23 +21,23 @@ namespace Temperature.Tests
 
         public static IEnumerable<object[]> FarenheitToCelsiusTestCases()
         {
-            var convertMethodToUse = new Func<decimal, decimal>(TemperatureConverter.Convert<FarenheitTemperature, CelsiusTemperature>);
-            yield return new object[] { convertMethodToUse, 17, -8.333 };
-            yield return new object[] { convertMethodToUse, 101.3, 38.5 };
+            var farenheitToCelsiusConverter = new Func<decimal, decimal>(TemperatureConverter.Convert<FarenheitTemperature, CelsiusTemperature>);
+            yield return new object[] { farenheitToCelsiusConverter, 17, -8.333 };
+            yield return new object[] { farenheitToCelsiusConverter, 101.3, 38.5 };
         }
 
         public static IEnumerable<object[]> FarenheitToKelvinTestCases()
         {
-            var convertMethodToUse = new Func<decimal, decimal>(TemperatureConverter.Convert<FarenheitTemperature, KelvinTemperature>);
-            yield return new object[] { convertMethodToUse, 28, 270.928 };
-            yield return new object[] { convertMethodToUse, 150.74, 339.117 };
+            var farenheitToKelvinConverter = new Func<decimal, decimal>(TemperatureConverter.Convert<FarenheitTemperature, KelvinTemperature>);
+            yield return new object[] { farenheitToKelvinConverter, 28, 270.928 };
+            yield return new object[] { farenheitToKelvinConverter, 150.74, 339.117 };
         }
 
         public static IEnumerable<object[]> CelsiusToKelvinTestCases()
         {
-            var convertMethodToUse = new Func<decimal, decimal>(TemperatureConverter.Convert<CelsiusTemperature, KelvinTemperature>);
-            yield return new object[] { convertMethodToUse, 1, 274.15 };
-            yield return new object[] { convertMethodToUse, 101.3, 374.45 };
+            var celsiusToKelvinConverter = new Func<decimal, decimal>(TemperatureConverter.Convert<CelsiusTemperature, KelvinTemperature>);
+            yield return new object[] { celsiusToKelvinConverter, 1, 274.15 };
+            yield return new object[] { celsiusToKelvinConverter, 101.3, 374.45 };
         }
     }
 }
