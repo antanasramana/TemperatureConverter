@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Temperature.Domain
+﻿namespace Temperature.Domain
 {
     public class FarenheitTemperature : ITemperature
     {
