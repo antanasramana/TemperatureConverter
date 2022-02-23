@@ -12,7 +12,7 @@ namespace Temperature.Tests
         [MemberData(nameof(FarenheitToCelsiusTestCases))]
         [MemberData(nameof(FarenheitToKelvinTestCases))]
         [MemberData(nameof(CelsiusToKelvinTestCases))]
-        public void ConvertFromFarenheitToCelsius_ReturnsExpectedCelsiusTemperature(Func<decimal, decimal> convertMethodToUse, decimal temperatureFrom, decimal expectedConvertedTemperature)
+        public void ConvertFromSpecifiedTemperatureToResultingTemperature_ReturnsExpectedConvertedTemperature(Func<decimal, decimal> convertMethodToUse, decimal temperatureFrom, decimal expectedConvertedTemperature)
         {
             var actualCelsius = convertMethodToUse(temperatureFrom);
 
